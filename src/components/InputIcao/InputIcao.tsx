@@ -27,30 +27,28 @@ const InputIcao = () => {
 
   return (
     <div className={styles.metarFormContainer}>
-      <form onSubmit={handleFormSubmit}>
-        <label
-          className={cn(styles.label, {
-            [styles.winter]: season === "winter",
-            [styles.spring]: season === "spring",
-            [styles.summer]: season === "summer",
-            [styles.autumn]: season === "autumn",
-          })}
-          htmlFor="icao"
-        >
-          Enter ICAO airport code:
-          <div className={styles.inputWrapper}>
-            <input
-              ref={inputRef}
-              id="icao"
-              type="text"
-              maxLength={4}
-              value={icao}
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-            <TooltipIcao />
-          </div>
-        </label>
+      <form
+        className={cn(styles.form, {
+          [styles.winter]: season === "winter",
+          [styles.spring]: season === "spring",
+          [styles.summer]: season === "summer",
+          [styles.autumn]: season === "autumn",
+        })}
+        onSubmit={handleFormSubmit}
+      >
+        <label htmlFor="icao">Enter ICAO airport code:</label>
+        <div className={styles.inputWrapper}>
+          <input
+            ref={inputRef}
+            id="icao"
+            type="text"
+            maxLength={4}
+            value={icao}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+          <TooltipIcao />
+        </div>
       </form>
     </div>
   );

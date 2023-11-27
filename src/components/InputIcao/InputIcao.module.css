@@ -4,11 +4,15 @@
   font-size: 1.25rem;
 }
 
-.label {
+.form {
   display: flex;
   gap: 10px;
   color: #fff;
   font-weight: 800;
+  cursor: pointer;
+}
+
+.form label {
   cursor: pointer;
 }
 
@@ -30,6 +34,7 @@
 
 .inputWrapper {
   display: flex;
+  align-items: center;
 }
 
 .metarFormContainer input {
@@ -62,7 +67,7 @@
     font-size: 1rem;
   }
 
-  .label {
+  .form {
     gap: 0;
     flex-direction: column;
     align-items: center;
