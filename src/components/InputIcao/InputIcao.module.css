@@ -1,0 +1,74 @@
+.metarFormContainer {
+  display: flex;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.label {
+  display: flex;
+  gap: 10px;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.winter {
+  text-shadow: 1px 1px 1px var(--header-winter);
+}
+
+.spring {
+  text-shadow: 1px 1px 1px var(--header-spring);
+}
+
+.summer {
+  text-shadow: 1px 1px 1px var(--header-summer);
+}
+
+.autumn {
+  text-shadow: 1px 1px 1px var(--header-autumn);
+}
+
+.inputWrapper {
+  display: flex;
+}
+
+.metarFormContainer input {
+  height: 30px;
+  width: 100px;
+  padding-left: 0.5rem;
+  font-size: 1.25rem;
+  background-color: var(--background-info);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+.metarFormContainer input:focus {
+  outline: none;
+  border: 2px solid var(--light-blue);
+  border-radius: 5px;
+}
+
+.metarFormContainer i {
+  margin-left: 5px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+@media (max-width: 575px) {
+  .metarFormContainer {
+    font-size: 1rem;
+  }
+
+  .label {
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+  }
+  .inputWrapper {
+    margin-top: 5px;
+  }
+}

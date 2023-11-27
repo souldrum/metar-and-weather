@@ -1,0 +1,55 @@
+.errorIcao {
+  color: var(--error-yellow);
+}
+
+.errorIcao a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.errorIcao a:hover {
+  text-decoration: underline;
+}
+
+.oops {
+  height: 5rem;
+  width: 5rem;
+}
+
+.error404 {
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px;
+  color: red;
+  background-color: #fff;
+  border: 5px solid red;
+  border-radius: 5px;
+  word-break: break-all;
+  width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .error404 {
+    margin: 15px;
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .errorIcao {
+    width: auto;
+  }
+}
+
+@media (max-width: 540px) {
+  .error404 {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 320px) {
+  .error404 {
+    margin: 10px;
+    font-size: 0.5em;
+  }
+}

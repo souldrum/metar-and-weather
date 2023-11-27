@@ -1,0 +1,46 @@
+:root {
+  --background-info: #4b6166b3;
+  --background-footer: #085f87c4;
+  --dark-blue: #40b3b3;
+  --light-blue: #00e2ff;
+  --error-yellow: #fdb719;
+  --white-shadow: #ffffff99;
+  --header-winter: #52a0bf;
+  --header-spring: #b38bdf;
+  --header-summer: #fff457;
+  --header-autumn: #c57f12;
+}
+
+html {
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+li,
+input,
+button {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+}
+
+body {
+  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+}

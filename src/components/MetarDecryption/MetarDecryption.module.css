@@ -1,0 +1,40 @@
+.list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #fff;
+}
+
+.title {
+  color: var(--light-blue);
+  font-weight: bolder;
+}
+
+.data {
+  text-align: start;
+  font-weight: normal;
+}
+
+@media (max-width: 1440px) {
+  .infoItem {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .infoItem {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .data {
+    font-size: 0.8rem;
+  }
+}

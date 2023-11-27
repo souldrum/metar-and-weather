@@ -1,0 +1,72 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.infoField {
+  width: 40%;
+  margin: 0 auto;
+  padding: 0.75rem;
+  text-align: center;
+  color: #fff;
+  background-color: var(--background-info);
+  border: 2px solid #fff;
+  border-radius: 5px;
+  animation: fadeIn 0.5s;
+}
+
+.infoField p {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.infoField h3 {
+  text-decoration: underline;
+  margin-bottom: 0.75rem;
+}
+
+@media (max-width: 1440px) {
+  .infoField {
+    width: 50%;
+  }
+  .infoField p {
+    font-size: 1.1rem;
+    font-weight: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .infoField {
+    width: 60%;
+    margin: 0 15px;
+    width: auto;
+  }
+  .infoField h3 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .infoField {
+    padding: 0.5rem;
+  }
+  .infoField p {
+    font-size: 1rem;
+  }
+  .dataField h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .dataField p {
+    font-size: 0.8rem;
+  }
+  .dataField h3 {
+    font-size: 0.8rem;
+  }
+}
