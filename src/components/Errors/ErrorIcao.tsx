@@ -2,7 +2,7 @@ import InfoField from "../InfoField/InfoField";
 import styles from "./ErrorIndicator.module.css";
 import oops from "/src/assets/img/errors/oops.png";
 
-const ErrorIcao = () => {
+const ErrorIcao: React.FC = () => {
   return (
     <InfoField>
       <div className={styles.errorIcao}>

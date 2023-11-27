@@ -1,8 +1,8 @@
-import { useContext } from "react";
+import React from "react";
 import { MetarContext } from "../context/metarContext";
 
 const useApp = () => {
-  const result = useContext(MetarContext);
+  const result = React.useContext(MetarContext);
 
   return result;
 };

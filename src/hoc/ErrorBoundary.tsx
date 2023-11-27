@@ -1,8 +1,7 @@
-import { FC, PropsWithChildren } from "react";
 import ErrorIndicator from "../components/Errors/ErrorIndicator";
 import useApp from "../hooks/useApp";
 
-const ErrorBoundary: FC<PropsWithChildren> = ({ children }) => {
+const ErrorBoundary: React.FC<React.PropsWithChildren> = ({ children }) => {
   const { errorData } = useApp();
 
   if (errorData) {

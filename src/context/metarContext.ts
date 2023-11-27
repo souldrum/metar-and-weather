@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import React from "react";
 import { TransformDataType } from "./MetarProvider";
 
 export type ContextValue = {
@@ -27,4 +27,4 @@ const defaultValue: ContextValue = {
   loadMetar: () => {},
 };
 
-export const MetarContext = createContext<ContextValue>(defaultValue);
+export const MetarContext = React.createContext<ContextValue>(defaultValue);

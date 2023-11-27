@@ -1,7 +1,7 @@
-import { useRef } from "react";
+import React from "react";
 
 export const useSeasonColor = () => {
-  const seasonRef = useRef("");
+  const seasonRef = React.useRef("");
 
   const month = new Date().getMonth();
 

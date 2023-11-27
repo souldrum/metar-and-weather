@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, Reducer, useReducer } from "react";
+import React from "react";
 import MetarService from "../services/metarService";
 import { ExtractMetarDataType } from "../services/metarService.types";
 import { MetarContext } from "./metarContext";
@@ -33,7 +33,7 @@ const initialState: StateType = {
   errorData: "",
 };
 
-const reducer: Reducer<StateType, ActionType> = (
+const reducer: React.Reducer<StateType, ActionType> = (
   state = initialState,
   action
 ) => {
@@ -55,8 +55,8 @@ const reducer: Reducer<StateType, ActionType> = (
   }
 };
 
-const MetarProvider: FC<PropsWithChildren> = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+const MetarProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
+  const [state, dispatch] = React.useReducer(reducer, initialState);
 
   const setIcao = (icao: string) =>
     dispatch({ type: "SET_ICAO", payload: icao });

@@ -1,9 +1,8 @@
-import { FC } from "react";
 import styles from "./Footer.module.css";
 import FooterItem from "./FooterItem";
 import { footerData } from "./footerData";
 
-const Footer: FC = () => {
+const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       {footerData.map((data, i) => (

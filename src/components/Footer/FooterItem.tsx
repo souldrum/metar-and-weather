@@ -1,10 +1,14 @@
-import { FC, HTMLProps } from "react";
-
-type ATypes = Pick<HTMLProps<HTMLAnchorElement>, "href" | "target">;
-type ImgTypes = Pick<HTMLProps<HTMLImageElement>, "alt" | "src">;
+type ATypes = Pick<React.HTMLProps<HTMLAnchorElement>, "href" | "target">;
+type ImgTypes = Pick<React.HTMLProps<HTMLImageElement>, "alt" | "src">;
 type PropTypes = ATypes & ImgTypes & { title: string; className: string };
 
-const FooterItem: FC<PropTypes> = ({ title, href, alt, src, className }) => {
+const FooterItem: React.FC<PropTypes> = ({
+  title,
+  href,
+  alt,
+  src,
+  className,
+}) => {
   return (
     <address className={className}>
       {title}

@@ -1,9 +1,8 @@
 import cn from "classnames";
-import { FC } from "react";
 import { useSeasonColor } from "../../hooks/useSeasonColor";
 import styles from "./Header.module.css";
 
-const Header: FC = () => {
+const Header: React.FC = () => {
   const season = useSeasonColor();
 
   return (

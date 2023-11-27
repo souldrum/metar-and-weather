@@ -1,15 +1,15 @@
 import cn from "classnames";
-import { useEffect, useRef } from "react";
+import React from "react";
 import useApp from "../../hooks/useApp";
 import { useSeasonColor } from "../../hooks/useSeasonColor";
 import TooltipIcao from "../TooltipIcao/TooltipIcao";
 import styles from "./InputIcao.module.css";
 
-const InputIcao = () => {
+const InputIcao: React.FC = () => {
   const { icao, setIcao, loadMetar } = useApp();
   const season = useSeasonColor();
-  const inputRef = useRef<HTMLInputElement>(null);
-  useEffect(() => {
+  const inputRef = React.useRef<HTMLInputElement>(null);
+  React.useEffect(() => {
     inputRef.current && inputRef.current.focus();
   }, []);
 

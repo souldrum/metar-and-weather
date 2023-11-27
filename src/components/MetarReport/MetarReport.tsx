@@ -1,7 +1,7 @@
 import useApp from "../../hooks/useApp";
 import InfoField from "../InfoField/InfoField";
 
-const MetarReport = () => {
+const MetarReport: React.FC = () => {
   const { metar } = useApp();
 
   if (!metar) {

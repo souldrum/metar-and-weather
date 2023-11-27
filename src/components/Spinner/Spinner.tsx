@@ -1,6 +1,6 @@
 import "./Spinner.css";
 
-const Spinner = () => {
+const Spinner: React.FC = () => {
   return (
     <div className="loadingio-spinner-dual-ring-wwpo983oger">
       <div className="ldio-mt8572ax2ml">

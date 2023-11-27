@@ -1,7 +1,6 @@
-import { FC, PropsWithChildren } from "react";
 import styles from "./InfoField.module.css";
 
-const InfoField: FC<PropsWithChildren> = ({ children }) => {
+const InfoField: React.FC<React.PropsWithChildren> = ({ children }) => {
   return <div className={styles.infoField}>{children}</div>;
 };
 

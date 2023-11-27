@@ -3,7 +3,7 @@ import useApp from "../../hooks/useApp";
 import InfoField from "../InfoField/InfoField";
 import styles from "./MetarDecryption.module.css";
 
-const MetarDecryption = () => {
+const MetarDecryption: React.FC = () => {
   const { transformData, metar } = useApp();
 
   type Key = keyof TransformDataType;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React from "react";
 import cl from "../components/BackgroundWrapper/BackgroundWrapper.module.css";
 
 const winter = [cl.winter1, cl.winter2, cl.winter3, cl.winter4];
@@ -36,9 +36,9 @@ switch (months) {
 }
 
 export const useBackgroundWrapper = () => {
-  const [imgIndex, setImgIndex] = useState(0);
+  const [imgIndex, setImgIndex] = React.useState(0);
 
-  useEffect(() => {
+  React.useEffect(() => {
     setTimeout(
       () =>
         imgIndex === season.length - 1
