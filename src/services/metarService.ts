@@ -5,7 +5,11 @@ import {
   createUnmodifiedDataRow,
   createWindModifiedRow,
 } from "../helpers/modifiedDataRows";
-import { ApiResponseJsonType, FetchOptionsType } from "./metarService.types";
+import {
+  ApiResponseJsonType,
+  ExtractMetarDataType,
+  FetchOptionsType,
+} from "./metarService.types";
 
 export default class MetarService {
   private API_BASE = "https://api.checkwx.com/metar/";
@@ -35,19 +39,21 @@ export default class MetarService {
     }
   };
 
-  getDataRows = async (icao: string) => {
+  getDataRows = async (icao: string): Promise<ExtractMetarDataType> => {
     const res = await this.getData<ApiResponseJsonType>(icao);
+    if (!res.results)
+      throw new Error(`Invalid ICAO! Airport code ${icao} not found`);
 
-    const data = res.data[0];
+    const [report] = res.data;
 
-    const metar = data.raw_text;
-    const airportName = data.station?.name;
-    const location = data.station?.location;
-    const reportTime = data.observed;
-    const temp = data.temperature;
-    const dewPoint = data.dewpoint;
-    const wind = data.wind;
-    const barometer = data.barometer;
+    const metar = report.raw_text;
+    const airportName = report.station?.name;
+    const location = report.station?.location;
+    const reportTime = report.observed;
+    const temp = report.temperature;
+    const dewPoint = report.dewpoint;
+    const wind = report.wind;
+    const barometer = report.barometer;
 
     return {
       metar,

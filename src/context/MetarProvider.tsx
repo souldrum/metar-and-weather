@@ -78,7 +78,7 @@ const MetarProvider: FC<PropsWithChildren> = ({ children }) => {
         setTransformData(otherData);
         setErrorData("");
       })
-      .catch((e) => {
+      .catch((e: Error) => {
         setErrorData(e.message);
         setMetar("");
         setTransformData({});
