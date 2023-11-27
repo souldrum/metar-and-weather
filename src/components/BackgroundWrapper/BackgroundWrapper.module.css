@@ -2,22 +2,22 @@
 body:after {
   position: fixed;
   visibility: hidden;
-  content: url(src/assets/img/seasons/winter/winter_1.jpeg)
-    url(src/assets/img/seasons/winter/winter_2.jpg)
-    url(src/assets/img/seasons/winter/winter_3.jpg)
-    url(src/assets/img/seasons/winter/winter_4.jpg)
-    url(src/assets/img/seasons/spring/spring_1.jpg)
-    url(src/assets/img/seasons/spring/spring_2.jpg)
-    url(src/assets/img/seasons/spring/spring_3.jpg)
-    url(src/assets/img/seasons/spring/spring_4.jpg)
-    url(src/assets/img/seasons/summer/summer_1.jpg)
-    url(src/assets/img/seasons/summer/summer_2.jpg)
-    url(src/assets/img/seasons/summer/summer_3.jpg)
-    url(src/assets/img/seasons/summer/summer_4.jpg)
+  content: url(../../assets/img/seasons/winter/winter_1.jpeg)
+    url(../../assets/img/seasons/winter/winter_2.jpg)
+    url(../../assets/img/seasons/winter/winter_3.jpg)
+    url(../../assets/img/seasons/winter/winter_4.jpg)
+    url(../../assets/img/seasons/spring/spring_1.jpg)
+    url(../../assets/img/seasons/spring/spring_2.jpg)
+    url(../../assets/img/seasons/spring/spring_3.jpg)
+    url(../../assets/img/seasons/spring/spring_4.jpg)
+    url(../../assets/img/seasons/summer/summer_1.jpg)
+    url(../../assets/img/seasons/summer/summer_2.jpg)
+    url(../../assets/img/seasons/summer/summer_3.jpg)
+    url(../../assets/img/seasons/summer/summer_4.jpg)
     url(../../assets/img/seasons/autumn/autumn_1.jpg)
-    url(src/assets/img/seasons/autumn/autumn_2.jpeg)
-    url(src/assets/img/seasons/autumn/autumn_3.jpg)
-    url(src/assets/img/seasons/autumn/autumn_4.jpeg);
+    url(../../assets/img/seasons/autumn/autumn_2.jpeg)
+    url(../../assets/img/seasons/autumn/autumn_3.jpg)
+    url(../../assets/img/seasons/autumn/autumn_4.jpeg);
 }
 /*==================*/
 
@@ -29,65 +29,65 @@ body:after {
   transition: background-image 4s ease-in-out;
 }
 .winter1 {
-  background-image: url(src/assets/img/seasons/winter/winter_1.jpeg);
+  background-image: url(../../assets/img/seasons/winter/winter_1.jpeg);
 }
 
 .winter2 {
-  background-image: url(src/assets/img/seasons/winter/winter_2.jpg);
+  background-image: url(../../assets/img/seasons/winter/winter_2.jpg);
 }
 
 .winter3 {
-  background-image: url(src/assets/img/seasons/winter/winter_3.jpg);
+  background-image: url(../../assets/img/seasons/winter/winter_3.jpg);
 }
 
 .winter4 {
-  background-image: url(src/assets/img/seasons/winter/winter_4.jpg);
+  background-image: url(../../assets/img/seasons/winter/winter_4.jpg);
 }
 
 .spring1 {
-  background-image: url(src/assets/img/seasons/spring/spring_1.jpg);
+  background-image: url(../../assets/img/seasons/spring/spring_1.jpg);
 }
 
 .spring2 {
-  background-image: url(src/assets/img/seasons/spring/spring_2.jpg);
+  background-image: url(../../assets/img/seasons/spring/spring_2.jpg);
 }
 
 .spring3 {
-  background-image: url(src/assets/img/seasons/spring/spring_3.jpg);
+  background-image: url(../../assets/img/seasons/spring/spring_3.jpg);
 }
 
 .spring4 {
-  background-image: url(src/assets/img/seasons/spring/spring_4.jpg);
+  background-image: url(../../assets/img/seasons/spring/spring_4.jpg);
 }
 
 .summer1 {
-  background-image: url(src/assets/img/seasons/summer/summer_1.jpg);
+  background-image: url(../../assets/img/seasons/summer/summer_1.jpg);
 }
 
 .summer2 {
-  background-image: url(src/assets/img/seasons/summer/summer_2.jpg);
+  background-image: url(../../assets/img/seasons/summer/summer_2.jpg);
 }
 
 .summer3 {
-  background-image: url(src/assets/img/seasons/summer/summer_3.jpg);
+  background-image: url(../../assets/img/seasons/summer/summer_3.jpg);
 }
 
 .summer4 {
-  background-image: url(src/assets/img/seasons/summer/summer_4.jpg);
+  background-image: url(../../assets/img/seasons/summer/summer_4.jpg);
 }
 
 .autumn1 {
-  background-image: url(src/assets/img/seasons/autumn/autumn_1.jpg);
+  background-image: url(../../assets/img/seasons/autumn/autumn_1.jpg);
 }
 
 .autumn2 {
-  background-image: url(src/assets/img/seasons/autumn/autumn_2.jpeg);
+  background-image: url(../../assets/img/seasons/autumn/autumn_2.jpeg);
 }
 
 .autumn3 {
-  background-image: url(src/assets/img/seasons/autumn/autumn_3.jpg);
+  background-image: url(../../assets/img/seasons/autumn/autumn_3.jpg);
 }
 
 .autumn4 {
-  background-image: url(src/assets/img/seasons/autumn/autumn_4.jpeg);
+  background-image: url(../../assets/img/seasons/autumn/autumn_4.jpeg);
 }
