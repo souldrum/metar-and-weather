@@ -9,9 +9,10 @@ import {
   ApiResponseJsonType,
   ExtractMetarDataType,
   FetchOptionsType,
+  MetarRequests,
 } from "./metarService.types";
 
-export default class MetarService {
+export default class MetarService implements MetarRequests {
   private API_BASE = "https://api.checkwx.com/metar/";
 
   getData = async <T>(icao: string): Promise<T> => {
@@ -31,6 +32,7 @@ export default class MetarService {
       if (!res.ok) {
         throw new Error(`Could not fetch ${URL}, received ${res.status}`);
       }
+
       const json = await res.json();
       return json;
     } catch (error) {

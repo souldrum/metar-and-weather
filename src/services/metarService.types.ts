@@ -1,21 +1,21 @@
 import { DataRowType } from "../helpers/modifiedDataRows.types";
 
-export interface HttpResponse<T> extends Response {
-  parsedBody?: T;
+export interface MetarRequests {
+  getData: <T>(icao: string) => Promise<T>;
+  getDataRows: (icao: string) => Promise<ExtractMetarDataType>;
 }
-
 export interface ApiResponseJsonType {
   results: number;
-  data: WeatherData[];
+  data: WeatherDataType[];
 }
 
-export type WeatherData = {
+export type WeatherDataType = {
   icao: string;
   barometer: BarometerType;
-  ceiling: CeilingType;
+  ceiling: ElevationType;
   clouds: CloudType[];
   dewpoint: TemperatureType;
-  elevation: CeilingType;
+  elevation: ElevationType;
   flight_category: string;
   humidity: HumidityType;
   observed: string;
@@ -28,57 +28,63 @@ export type WeatherData = {
 
 export type WindType = {
   degrees: number;
-  speed_kph?: number;
+  speed_kph: number;
   speed_kts: number;
-  speed_mph?: number;
+  speed_mph: number;
   speed_mps: number;
+  gust_kph: number;
+  gust_kts: number;
+  gust_mph: number;
+  gust_mps: number;
 };
 
 export type VisibilityType = {
-  miles?: string;
-  miles_float?: number;
-  meters?: string;
-  meters_float?: number;
+  miles: string;
+  miles_float: number;
+  meters: string;
+  meters_float: number;
 };
 
 export type StationType = {
-  geometry?: GeometryType;
+  geometry: GeometryType;
   location: string;
   name: string;
-  type?: string;
+  type: string;
 };
 
 export type GeometryType = {
-  coordinates?: number[];
-  type?: string;
+  coordinates: number[];
+  type: string;
 };
 
 export type HumidityType = {
-  percent?: number;
+  percent: number;
 };
 
 export type TemperatureType = {
   celsius: number;
-  fahrenheit?: number;
+  fahrenheit: number;
 };
 
 export type CloudType = {
   base_feet_agl?: number;
   base_meters_agl?: number;
-  code?: string;
-  text?: string;
-  feet?: number;
-  meters?: number;
+  code: string;
+  text: string;
+  feet: number;
+  meters: number;
 };
 
-export type CeilingType = {
-  feet?: number;
-  meters?: number;
+export type ElevationType = {
+  feet: number;
+  meters: number;
 };
 
 export type BarometerType = {
   hg: number;
   hpa: number;
+  kpa: number;
+  mb: number;
 };
 
 export type FetchOptionsType = {
