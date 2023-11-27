@@ -28,14 +28,14 @@ export type WeatherDataType = {
 
 export type WindType = {
   degrees: number;
-  speed_kph: number;
+  speed_kph?: number;
   speed_kts: number;
-  speed_mph: number;
+  speed_mph?: number;
   speed_mps: number;
-  gust_kph: number;
-  gust_kts: number;
-  gust_mph: number;
-  gust_mps: number;
+  gust_kph?: number;
+  gust_kts?: number;
+  gust_mph?: number;
+  gust_mps?: number;
 };
 
 export type VisibilityType = {
@@ -63,7 +63,7 @@ export type HumidityType = {
 
 export type TemperatureType = {
   celsius: number;
-  fahrenheit: number;
+  fahrenheit?: number;
 };
 
 export type CloudType = {
@@ -83,8 +83,8 @@ export type ElevationType = {
 export type BarometerType = {
   hg: number;
   hpa: number;
-  kpa: number;
-  mb: number;
+  kpa?: number;
+  mb?: number;
 };
 
 export type FetchOptionsType = {
