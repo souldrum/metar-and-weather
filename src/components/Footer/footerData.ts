@@ -26,7 +26,7 @@ export const footerData: FooterItemDataType[] = [
   {
     className: "",
     title: "Manual on github:",
-    href: "https://github.com/souldrum/Metar_And_Weather#readme",
+    href: "https://github.com/souldrum/metar-and-weather#metar-and-weather",
     alt: "github",
     src: "https://img.icons8.com/color/48/000000/github--v1.png",
   },
