@@ -23,8 +23,6 @@ type ActionType =
   | { type: "ERROR"; payload: string }
   | { type: "RESET" };
 
-const { getDataRows } = new MetarService();
-
 const initialState: StateType = {
   icao: "",
   metar: "",
@@ -72,7 +70,7 @@ const MetarProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
 
   const loadMetar = () => {
     setIsLoading(true);
-    getDataRows(state.icao)
+    MetarService.getDataRows(state.icao)
       .then(({ metar, ...otherData }) => {
         setMetar(metar);
         setTransformData(otherData);

@@ -9,17 +9,16 @@ import {
   ApiResponseJsonType,
   ExtractMetarDataType,
   FetchOptionsType,
-  MetarRequests,
 } from "./metarService.types";
 
-export default class MetarService implements MetarRequests {
-  private API_BASE = "https://api.checkwx.com/metar/";
+export default class MetarService {
+  private static API_BASE = import.meta.env.VITE_BASE_URL;
 
-  getData = async <T>(icao: string): Promise<T> => {
+  static getData = async <T>(icao: string): Promise<T> => {
     const URL = `${this.API_BASE}${icao}/decoded`;
 
     const myHeaders = new Headers();
-    myHeaders.append("X-API-Key", import.meta.env.VITE_METAR_API_KEY);
+    myHeaders.append("X-API-Key", import.meta.env.VITE_API_KEY);
 
     const options: FetchOptionsType = {
       method: "GET",
@@ -41,7 +40,7 @@ export default class MetarService implements MetarRequests {
     }
   };
 
-  getDataRows = async (icao: string): Promise<ExtractMetarDataType> => {
+  static getDataRows = async (icao: string): Promise<ExtractMetarDataType> => {
     const res = await this.getData<ApiResponseJsonType>(icao);
     if (!res.results)
       throw new Error(`Invalid ICAO! Airport code ${icao} not found`);
