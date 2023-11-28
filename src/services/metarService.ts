@@ -11,14 +11,15 @@ import {
   FetchOptionsType,
 } from "./metarService.types";
 
-export default class MetarService {
-  private static API_BASE = import.meta.env.VITE_BASE_URL;
+const API_KEY = import.meta.env.VITE_API_KEY;
+const API_BASE = import.meta.env.VITE_BASE_URL;
 
+export default class MetarService {
   static getData = async (icao: string): Promise<ApiResponseJsonType> => {
-    const URL = `${this.API_BASE}${icao}/decoded`;
+    const URL = `${API_BASE}${icao}/decoded`;
 
     const myHeaders = new Headers();
-    myHeaders.append("X-API-Key", import.meta.env.VITE_API_KEY);
+    myHeaders.append("X-API-Key", API_KEY);
 
     const options: FetchOptionsType = {
       method: "GET",
