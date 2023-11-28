@@ -14,7 +14,7 @@ import {
 export default class MetarService {
   private static API_BASE = import.meta.env.VITE_BASE_URL;
 
-  static getData = async <T>(icao: string): Promise<T> => {
+  static getData = async (icao: string): Promise<ApiResponseJsonType> => {
     const URL = `${this.API_BASE}${icao}/decoded`;
 
     const myHeaders = new Headers();
@@ -41,7 +41,7 @@ export default class MetarService {
   };
 
   static getDataRows = async (icao: string): Promise<ExtractMetarDataType> => {
-    const res = await this.getData<ApiResponseJsonType>(icao);
+    const res = await this.getData(icao);
     if (!res.results)
       throw new Error(`Invalid ICAO! Airport code ${icao} not found`);
 

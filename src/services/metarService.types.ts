@@ -1,7 +1,7 @@
 import { DataRowType } from "../helpers/modifiedDataRows.types";
 
 export interface MetarRequests {
-  getData: <T>(icao: string) => Promise<T>;
+  getData: (icao: string) => Promise<ApiResponseJsonType>;
   getDataRows: (icao: string) => Promise<ExtractMetarDataType>;
 }
 export interface ApiResponseJsonType {
