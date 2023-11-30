@@ -1,10 +1,10 @@
-import { env } from "process";
-import axios from "axios";
+const process = require("process");
+const axios = require("axios");
 
 // Docs on event and context https://docs.netlify.com/functions/build/#code-your-function-2
-export const handler = async (event) => {
-  const API_KEY = env.VITE_API_KEY;
-  const API_BASE = env.VITE_BASE_URL;
+const handler = async (event) => {
+  const API_KEY = process.env.VITE_API_KEY;
+  const API_BASE = process.env.VITE_BASE_URL;
   const icao = event.queryStringParameters.icao;
   const URL = `${API_BASE}${icao}/decoded`;
 
@@ -27,3 +27,6 @@ export const handler = async (event) => {
     return { statusCode: error.response.status, body: error.toString() };
   }
 };
+
+// eslint-disable-next-line no-undef
+module.exports = { handler };
