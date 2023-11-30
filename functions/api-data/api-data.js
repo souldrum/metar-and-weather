@@ -28,5 +28,4 @@ const handler = async (event) => {
   }
 };
 
-// eslint-disable-next-line no-undef
 module.exports = { handler };
