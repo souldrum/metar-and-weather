@@ -1,5 +1,5 @@
 import React from "react";
-import { TransformDataType } from "./MetarProvider";
+import { TransformDataType } from "./useMetarStore";
 
 export type ContextValue = {
   icao: string;
