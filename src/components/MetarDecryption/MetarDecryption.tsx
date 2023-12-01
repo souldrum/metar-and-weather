@@ -1,4 +1,4 @@
-import { TransformDataType } from "../../context/MetarProvider";
+import { TransformDataType } from "../../context/useMetarReducer";
 import useApp from "../../hooks/useApp";
 import InfoField from "../InfoField/InfoField";
 import styles from "./MetarDecryption.module.css";
