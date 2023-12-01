@@ -32,4 +32,6 @@ dist-ssr
 *.sw?
 
 /.vscode
-/.netlify
+
+# Local Netlify folder
+.netlify

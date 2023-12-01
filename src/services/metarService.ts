@@ -8,27 +8,14 @@ import {
 import {
   ApiResponseJsonType,
   ExtractMetarDataType,
-  FetchOptionsType,
 } from "./metarService.types";
-
-const API_KEY = import.meta.env.VITE_API_KEY;
-const API_BASE = import.meta.env.VITE_BASE_URL;
 
 export default class MetarService {
   static getData = async (icao: string): Promise<ApiResponseJsonType> => {
-    const URL = `${API_BASE}${icao}/decoded`;
-
-    const myHeaders = new Headers();
-    myHeaders.append("X-API-Key", API_KEY);
-
-    const options: FetchOptionsType = {
-      method: "GET",
-      headers: myHeaders,
-      redirect: "follow",
-    };
+    const URL = `/.netlify/functions/api-data/api-data?icao=${icao}`;
 
     try {
-      const res = await fetch(URL, options);
+      const res = await fetch(URL);
       if (!res.ok) {
         throw new Error(`Could not fetch ${URL}, received ${res.status}`);
       }
