@@ -13,15 +13,24 @@ type StateType = {
   errorData: string;
 };
 
-type ActionType =
-  | { type: "SET_ICAO"; payload: string }
-  | { type: "SET_METAR"; payload: string }
-  | { type: "SET_DATA"; payload: TransformDataType }
-  | { type: "LOADING"; payload: boolean }
-  | { type: "ERROR"; payload: string }
-  | { type: "RESET" };
+export const enum AT {
+  SET_ICAO = "SET_ICAO",
+  SET_METAR = "SET_METAR",
+  SET_DATA = "SET_DATA",
+  LOADING = "LOADING",
+  ERROR = "ERROR",
+  RESET = "RESET",
+}
 
-export const useMetarStore = () => {
+type ActionType =
+  | { type: AT.SET_ICAO; payload: string }
+  | { type: AT.SET_METAR; payload: string }
+  | { type: AT.SET_DATA; payload: TransformDataType }
+  | { type: AT.LOADING; payload: boolean }
+  | { type: AT.ERROR; payload: string }
+  | { type: AT.RESET };
+
+export const useMetarReducer = () => {
   const initialState: StateType = {
     icao: "",
     metar: "",
@@ -35,17 +44,17 @@ export const useMetarStore = () => {
     action
   ) => {
     switch (action.type) {
-      case "SET_ICAO":
+      case AT.SET_ICAO:
         return { ...state, icao: action.payload };
-      case "SET_METAR":
+      case AT.SET_METAR:
         return { ...state, metar: action.payload };
-      case "SET_DATA":
+      case AT.SET_DATA:
         return { ...state, transformData: action.payload };
-      case "LOADING":
+      case AT.LOADING:
         return { ...state, isLoading: action.payload };
-      case "ERROR":
+      case AT.ERROR:
         return { ...state, errorData: action.payload };
-      case "RESET":
+      case AT.RESET:
         return initialState;
       default:
         return state;

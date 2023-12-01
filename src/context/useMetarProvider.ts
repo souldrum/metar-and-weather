@@ -1,22 +1,22 @@
 import React from "react";
 import MetarService from "../services/metarService";
-import { TransformDataType, useMetarStore } from "./useMetarStore";
+import { AT, TransformDataType, useMetarReducer } from "./useMetarReducer";
 
 export const useMetarProvider = () => {
-  const { initialState, reducer } = useMetarStore();
+  const { initialState, reducer } = useMetarReducer();
   const [state, dispatch] = React.useReducer(reducer, initialState);
 
   const setIcao = (icao: string) =>
-    dispatch({ type: "SET_ICAO", payload: icao });
+    dispatch({ type: AT.SET_ICAO, payload: icao });
   const setMetar = (metar: string) =>
-    dispatch({ type: "SET_METAR", payload: metar });
+    dispatch({ type: AT.SET_METAR, payload: metar });
   const setTransformData = (transformData: TransformDataType) =>
-    dispatch({ type: "SET_DATA", payload: transformData });
+    dispatch({ type: AT.SET_DATA, payload: transformData });
   const setIsLoading = (loading: boolean) =>
-    dispatch({ type: "LOADING", payload: loading });
-  const resetData = () => dispatch({ type: "RESET" });
+    dispatch({ type: AT.LOADING, payload: loading });
+  const resetData = () => dispatch({ type: AT.RESET });
   const setErrorData = (error: string) =>
-    dispatch({ type: "ERROR", payload: error });
+    dispatch({ type: AT.ERROR, payload: error });
 
   const loadMetar = () => {
     setIsLoading(true);
