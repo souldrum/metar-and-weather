@@ -22,7 +22,7 @@ Hello, I'm [Souldrum](https://github.com/souldrum) and this is my little [Metar 
 
 ![get icao](src/assets/img/readme/LFPG.jpg)
 
-- For example, we are interested in the weather around Charles de Gaulle Airport in Paris. We enter its code in the input field, press the ENTER key and we get the METAR summary (top field) and the decoding of some METAR summary data (field below).
+- For example, we are interested in the weather around Charles de Gaulle Airport in Paris. We enter its code in the input field, press the ENTER key (or click outside the input field) and we get the METAR summary (top field) and the decoding of some METAR summary data (field below).
 
 ![enter icao](src/assets/img/readme/data.jpg)
 
