@@ -46,6 +46,7 @@ const InputIcao: React.FC = () => {
             value={icao}
             onChange={handleChange}
             onBlur={handleBlur}
+            placeholder="LFPG"
           />
           <TooltipIcao />
         </div>

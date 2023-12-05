@@ -16,6 +16,10 @@
   cursor: pointer;
 }
 
+.form input::placeholder {
+  color: var(--placeholder-text);
+}
+
 .winter {
   text-shadow: 1px 1px 1px var(--header-winter);
 }
