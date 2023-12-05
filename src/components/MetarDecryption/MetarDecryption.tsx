@@ -11,7 +11,7 @@ const MetarDecryption: React.FC = () => {
   const dataRows = Object.keys(transformData).map((key) => {
     return {
       id: key,
-      text: transformData[key as Key].title,
+      title: transformData[key as Key].title,
       data: transformData[key as Key].data,
     };
   });
@@ -24,9 +24,9 @@ const MetarDecryption: React.FC = () => {
     <InfoField>
       <h3>Decryption of some METAR data:</h3>
       <ul className={styles.list}>
-        {dataRows.map(({ id, text, data }) => (
+        {dataRows.map(({ id, title, data }) => (
           <li key={id} className={styles.infoItem}>
-            <span className={styles.title}>{text}</span>
+            <span className={styles.title}>{title}</span>
             <span className={styles.data}>{data}</span>
           </li>
         ))}
