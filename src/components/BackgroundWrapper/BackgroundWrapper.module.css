@@ -27,6 +27,7 @@ body:after {
   background-size: cover;
   background-repeat: no-repeat;
   transition: background-image 4s ease-in-out;
+  -moz-transition: background-image 4s ease-in-out;
 }
 .winter1 {
   background-image: url(../../assets/img/seasons/winter/winter_1.jpeg);
