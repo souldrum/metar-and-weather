@@ -1,4 +1,4 @@
-import { DataRowType } from "../helpers/modifiedDataRows.types";
+import { DataRowType } from "../utils/modifiedDataRows.types";
 
 export interface MetarRequests {
   getData: (icao: string) => Promise<ApiResponseJsonType>;

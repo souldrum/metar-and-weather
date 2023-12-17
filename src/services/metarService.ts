@@ -4,7 +4,7 @@ import {
   createTempModifiedRow,
   createUnmodifiedDataRow,
   createWindModifiedRow,
-} from "../helpers/modifiedDataRows";
+} from "../utils/modifiedDataRows";
 import {
   ApiResponseJsonType,
   ExtractMetarDataType,
