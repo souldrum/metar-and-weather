@@ -18,7 +18,7 @@ export const useMetarProvider = () => {
   const setErrorData = (error: string) =>
     dispatch({ type: AT.ERROR, payload: error });
 
-  const loadMetar = () => {
+  const loadMetar = React.useCallback(() => {
     setIsLoading(true);
     MetarService.getDataRows(state.icao)
       .then(({ metar, ...otherData }) => {
@@ -32,7 +32,7 @@ export const useMetarProvider = () => {
         setTransformData({});
       })
       .finally(() => setIsLoading(false));
-  };
+  }, [state.icao]);
 
   return {
     state,

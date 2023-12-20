@@ -9,21 +9,26 @@ const InputIcao: React.FC = () => {
   const { icao, setIcao, loadMetar } = useApp();
   const season = useSeasonColor();
   const inputRef = React.useRef<HTMLInputElement>(null);
+
   React.useEffect(() => {
     inputRef.current && inputRef.current.focus();
   }, []);
 
+  React.useEffect(() => {
+    if (icao.length === 4) {
+      loadMetar();
+      inputRef.current && inputRef.current.blur();
+    }
+  }, [icao.length, loadMetar]);
+
   const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (icao.length < 4) return;
-    // loadMetar();  //load when blur
-    inputRef.current?.blur();
+    loadMetar();
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setIcao(e.target.value.toUpperCase());
-
-  const handleBlur = () => icao.length === 4 && loadMetar();
 
   return (
     <div className={styles.metarFormContainer}>
@@ -45,7 +50,6 @@ const InputIcao: React.FC = () => {
             maxLength={4}
             value={icao}
             onChange={handleChange}
-            onBlur={handleBlur}
             placeholder="LFPG"
           />
           <TooltipIcao />
